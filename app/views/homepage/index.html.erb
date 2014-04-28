@@ -1,0 +1,10 @@
+<p data-rol='description'>Amherst Youth Hockey</p>
+<%= form_for :user_session, url: session_path do |form| %>
+	<%= form.label :email, 'Email:' %>
+	<%= form.text_field :email %>
+	<%= form.label :password, 'Password:' %>
+	<%= form.text_field :password %>
+	<%= form.submit 'Sign In' %>
+<% end %>
+<%= link_to "Register now",:controller => 
+            :users, :action =>'create' %>

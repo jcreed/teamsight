@@ -1,0 +1,12 @@
+%h1
+	Registration Page
+= form_for :users, :url => users_path, :html => {:action => :create, :method => :post} do |form|
+	%dt= form.label :firstname, 'Firstname:', required: true
+	%dd= form.text_field :firstname
+	%dt= form.label :lastname, 'Lastname:', required: true
+	%dd= form.text_field :lastname
+	%dt= form.label :email, 'Email:', required: true
+	%dd= form.text_field :email
+	%dt= form.label :password, 'Password:', required: true
+	%dd= form.text_field :password
+	= form.submit 'Submit'

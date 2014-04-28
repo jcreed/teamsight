@@ -1,0 +1,18 @@
+%p
+= "Welcome #{@session.email}"
+%br
+%div
+%p Login Successfull!
+%p Login
+%br
+/ = form_for(@session, url: session_path) do |form|
+/ 	%p 
+/ 		%label{:for => "user_session_email"} Email
+/ 		%br
+/ 		= form.text_field :email
+/ 	%p
+/ 		%label{:for => "user_session_password"} Password
+/ 		%br
+/ 		= form.password_field :password
+	  
+/ 	= form.submit("Sign In")
